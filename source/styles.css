@@ -10,6 +10,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font: 400 14px arial, sans-serif;
+    text-decoration: none;
 }
 
 div, span,form {
@@ -53,7 +55,7 @@ main aside {
     width: 400px;
     height: 100vh;
 }
-.right {
+/* .right {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,15 +63,16 @@ main aside {
 
     width: 380px;
     height: 100vh;   
-}
+} */
 .accesstate {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     width: 380px;
-    height: 100vh;   
+    height: 100vh;
+    max-height: 540px;   
 }
 
 /* form {
@@ -117,14 +120,14 @@ form .avatar img{
 .isYou img {
     bottom: 10%;
     width: 180px;
-    margin: 15px auto;
+    /* margin: 15px auto; */
 }
 
 .isYou .avatar img{
     border-radius: 50%;
     background: red;
     width: 80px;
-    margin: 10px;
+    /* margin: 10px; */
 }
 
 /* form .fields {
@@ -303,4 +306,37 @@ form ::placeholder{
 .buttons .buttonLink a img {
     width: 120px;
     height: 40px;
+}
+@media (max-width: 1024px) {
+    main aside {
+        width: 90%;
+    }
+    .accesstate {
+        width: 90%;
+    }
+}
+
+@media (max-width: 650px) {
+    main aside  {
+        display: none;
+    }
+    .accesstate {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-height: 90%;
+    }
+    .isYou {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: inherit;
+    }
+    .isnot {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
 }
