@@ -49,7 +49,6 @@ main aside {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid #fff;
 
     width: 400px;
     height: 100vh;
