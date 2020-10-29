@@ -1,6 +1,10 @@
 :root{
-    --background-color: #fff;
+    --backgroundForm: #fff;
     --linkfcb: #00f; 
+    --bordell: #dbdbdb;
+    --backgroundAll: #fafafa;
+    --placeHolder: #8e8e8e;
+    --Button: rgb(66, 66, 241);
 }
 *{
     margin: 0;
@@ -8,14 +12,20 @@
     box-sizing: border-box;
 }
 
-div, span {
+div, span,form {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font: 400 14px arial, sans-serif;
+    color: #676565;
+}
+
+button, a {
+    cursor: pointer;
 }
 
 body {
-    background: brown;
+    background: var(--backgroundAll);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -35,7 +45,14 @@ main {
 }
 
 main aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #fff;
+
+    width: 400px;
+    height: 100vh;
 }
 .right {
     display: flex;
@@ -43,11 +60,23 @@ main aside {
     justify-content: center;
     align-items: center;
 
-    width: 500px;   
+    width: 380px;
+    height: 100vh;   
+}
+.accesstate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 380px;
+    height: 100vh;   
 }
 
-form {
-    background: var(--background-color);
+/* form {
+    background: var(--backgroundForm);
+    border: 1px solid var(--bordell);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,9 +87,24 @@ form {
     margin-bottom: 15px;
 
     font: 400 14px arial, sans-serif;
+} */
+.isYou {
+    background: var(--backgroundForm);
+    border: 1px solid var(--bordell);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 350px;
+    height: 350px;
+    margin-bottom: 15px;
+
+    font: 400 14px arial, sans-serif;
 }
-form img {
-    width: 200px;
+/* form img {
+    width: 180px;
     margin: 15px auto;
     margin-bottom: 8px;
 }
@@ -70,13 +114,35 @@ form .avatar img{
     background: red;
     width: 80px;
     margin: 0;
+} */
+.isYou img {
+    bottom: 10%;
+    width: 180px;
+    margin: 15px auto;
 }
 
-form input {
+.isYou .avatar img{
+    border-radius: 50%;
+    background: red;
+    width: 80px;
+    margin: 10px;
+}
+
+/* form .fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form .fields .label input {
+    background: var(--backgroundAll);
+
     width: 267px;
     height: 38px;
-    border: 1px solid #838282;
-    border-radius: 5px;
+
+    border: 1px solid var(--bordell);
+    border-radius: 3px;
     outline: none;
 }
 
@@ -84,22 +150,56 @@ form .label + .label {
     margin-top: 6px;
 }
 
-form .label + button {
+form .fields + button {
     margin-top: 15px;
 }
 
 form button {
     width: 267px;
-    height: 30px;
+    height: 36px;
+
+    color: #fff;
+    text-transform: capitalize;
+
+    border: none;
+    border-radius: 3px;
+    background: var(--Button);
+} */
+.isYou button {
+    width: 267px;
+    height: 36px;
 
     color: #fff;
 
     border: none;
-    border-radius: 5px;
-    background: #00f;
+    border-radius: 3px;
+    background: var(--Button);
+}
+.KIGoing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.KIGoing .question{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
-form button + .divisor {
+.KIGoing .question a {
+    text-decoration: none;
+    color: inherit;
+    margin: 20px 0;
+    color: #39c9fd;
+    font-weight: 700;
+
+}
+
+
+/* form button + .divisor {
     margin-top: 15px;
 }
 
@@ -107,33 +207,75 @@ form .facebook {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
 
-    color: hsl(240, 90%, 75%);
-}
+    margin: 20px 0;
+    
+    color: #385185;
+    font-weight: bold;
+    text-decoration: none;
+} */
 
-form .facebook img{
+/* form .facebook img{
     width: 15px;
     height: 15px;
+    margin: 0 8px;
 }
 
 form .password {
-    font-size: 12px;
-    color: rgb(11, 11, 122);
+    font: 700 12px arial;
+    color: #385185;
     text-decoration: none;
     cursor: pointer;
+    margin-bottom: 10px;
 }
-.enroll {
-    background: var(--background-color);
+
+form ::placeholder{
+    padding-left: 10px;
+} */
+/* .enroll {
+    background: var(--backgroundAll);
+    border: 1px solid var(--bordell);
     display: flex;
     align-items: center;
     justify-content: center;
 
     width: 350px;
-    height: 60px;
+    height: 63px;
 
+    font: 300 14px arial, sans-serif;
+
+} */
+
+/* .enroll p a {
+    text-decoration: none;
+    color: #39c9fd;
+    font: 700 14px arial, sans-serif;
+} */
+.isnot {
+    background: var(--backgroundAll);
+    border: 1px solid var(--bordell);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 350px;
+    height: 63px;
+
+    text-decoration: none;
+    color: inherit;
     font: 400 14px arial, sans-serif;
+}
 
+.isnot a {
+    font: 700 14px arial, sans-serif;
+    color: #39c9fd;
+    text-decoration: none;
+}
+
+.isnot p {
+    margin: 3px 0;
 }
 
 .buttons {
@@ -145,6 +287,8 @@ form .password {
 
 .buttons p {
     margin: 20px;
+    color: #000;
+    font-weight: 700;
 }
 
 .buttons .buttonLink {
